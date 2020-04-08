@@ -29,3 +29,13 @@ Route::get('/tela_login', 'AppController@tela_login')
 
 Route::post('/login', 'AppController@login')
 	->name('logar');
+
+Route::get('/venda/cadastrar', 'VendaController@telaVendas')
+	->name('venda_cadastro');
+
+Route::get('/venda/listar', 'VendaController@listar')
+	->name('venda_lista');
+
+Route::post('/venda/adicionar', 'VendaController@adicionar')
+	->name('venda_add');
+
