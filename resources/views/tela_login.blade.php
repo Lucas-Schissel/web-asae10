@@ -25,7 +25,10 @@
 				<input type="password" name="senha" placeholder="Senha...">
 				<br><br>
 				<input type="submit"  value="Logar">
+				<br><br>
 			</form>
+
+			<a class="btn btn-primary" href="{{ route('usuario_cadastro') }}">Cadastrar-se</a>
 
 			</div>
 			<div class="col-md-2 mt-2">

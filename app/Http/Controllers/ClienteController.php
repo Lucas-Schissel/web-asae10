@@ -74,6 +74,11 @@ class ClienteController extends Controller
 
         return view("lista", [ "us" => $cli ]);
     }
+
+    function nomes(){
+        $n = Cliente::pluck('nome','id');
+        return view('tela_vendas')->with('tipos', $n);
+    }
    
 
 }
