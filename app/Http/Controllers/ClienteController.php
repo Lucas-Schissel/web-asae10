@@ -57,15 +57,16 @@ class ClienteController extends Controller
     }
 
     function excluir($id){
-        $usuario = Cliente::find($id);
+        $cli = Cliente::find($id);
 
-        if ($usuario->delete()){
+        if ($cli->delete()){
             $msg = "Usuário $id excluído com sucesso.";
         } else {
             $msg = "Usuário não foi excluído.";
         }
 
         return view("resultado", [ "mensagem" => $msg]);
+    
     }
 
     function listar(){

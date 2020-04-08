@@ -15,18 +15,19 @@
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarNav">
 			    <ul class="navbar-nav">
-			      <li class="nav-item active">
-			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			      <li class="nav-item">
+			        <a class="nav-link" href="{{route('tela_login')}}">Logar</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">Features</a>
+			        <a class="nav-link" href="{{route('usuario_cadastro')}}">Cadastrar</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">Pricing</a>
+			        <a class="nav-link" href="{{route('listar')}}">Listar</a>
+				  </li>
+				  <li class="nav-item">
+			        <a class="nav-link" href="{{route('vender')}}">Vender</a>
 			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-			      </li>
+			      
 			    </ul>
 			  </div>
 			</nav>

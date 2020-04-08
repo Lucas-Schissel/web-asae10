@@ -9,15 +9,23 @@ Route::get('/', function () {
 Route::get('/usuario/cadastro', 'ClienteController@telaCadastro')
 	->name('usuario_cadastro');
 
-Route::get('/usuario/alterar/{id}', 'ClienteController@telaAlteracao')->name('usuario_update');
+Route::get('/usuario/alterar/{id}', 'ClienteController@telaAlteracao')
+	->name('usuario_update');
 	
 Route::post('/usuario/adicionar', 'ClienteController@adicionar')
-		->name('usuario_add');
-Route::post('/usuario/alterar/{id}', 'ClienteController@alterar')->name('usuario_alterar');
+	->name('usuario_add');
 
-Route::get('/usuario/excluir/{id}', 'ClienteController@excluir')->name('usuario_delete');
+Route::post('/usuario/alterar/{id}', 'ClienteController@alterar')
+	->name('usuario_alterar');
 
-Route::get('/usuario/listar', 'ClienteController@listar')->name('listar');
+Route::get('/usuario/excluir/{id}', 'ClienteController@excluir')
+	->name('usuario_delete');
 
-Route::get('/tela_login', 'AppController@tela_login');
-Route::post('/login', 'AppController@login')->name('logar');
+Route::get('/usuario/listar', 'ClienteController@listar')
+	->name('listar');
+
+Route::get('/tela_login', 'AppController@tela_login')
+	->name('tela_login');
+
+Route::post('/login', 'AppController@login')
+	->name('logar');
