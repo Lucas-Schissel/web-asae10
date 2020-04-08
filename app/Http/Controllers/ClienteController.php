@@ -74,12 +74,6 @@ class ClienteController extends Controller
 
         return view("lista", [ "us" => $cli ]);
     }
-
-    function listarNome(){
-        $cli = Cliente::all();
-        return $cli;
-    }
-
-    
+   
 
 }

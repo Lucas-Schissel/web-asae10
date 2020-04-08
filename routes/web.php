@@ -39,3 +39,6 @@ Route::get('/venda/listar', 'VendaController@listar')
 Route::post('/venda/adicionar', 'VendaController@adicionar')
 	->name('venda_add');
 
+Route::get('/venda/excluir/{id}', 'VendaController@excluir')
+	->name('venda_delete');
+

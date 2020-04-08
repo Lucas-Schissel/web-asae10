@@ -15,7 +15,8 @@ class VendaController extends Controller
         $vnd = Venda::all();
 
         return view("vendas", [ "us" => $vnd ]);
-    }
+	}
+	
     function adicionar(Request $req){
     	$nome = $req->input('nome');
     	$valor = $req->input('valor');
@@ -32,5 +33,13 @@ class VendaController extends Controller
     	}
 
         return view("resultado", [ "mensagem" => $msg]);
+	}
+	
+	function excluir($id){
+		$vnd = Venda::find($id);
+		$vnd->delete();
+		
+		return 	VendaController::listar();
+  
     }
 }
