@@ -20,9 +20,9 @@
 			
 			<form method="post" action="{{ route('logar') }}">
 				@csrf
-				<input type="text" name="login" placeholder="Login...">
+				<input type="text" name="login" placeholder="Login..." required>
 				<br><br>
-				<input type="password" name="senha" placeholder="Senha...">
+				<input type="password" name="senha" placeholder="Senha..." required>
 				<br><br>
 				<input type="submit"  value="Logar">
 				<br><br>

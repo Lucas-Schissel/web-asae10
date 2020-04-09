@@ -32,6 +32,14 @@ class VendaController extends Controller
 
         return view("resultado", [ "mensagem" => $msg]);
 	}
+	
+	function excluir($id){
+		$vnd = Venda::find($id);
+		$vnd->delete();
+		
+		return 	VendaController::vendasPorCliente($id);
+  
+    }
 
     function  vendasPorCliente($id){
         $cli = Cliente::find($id);
