@@ -4,11 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Venda;
+use App\Cliente;
 
 class VendaController extends Controller
 {
-    function telaVendas(){
-    	return view("tela_vendas");
+    function telaCadastro(){
+        $cliente = Cliente::all();
+
+        return view ("tela_vendas",
+            ["usuario"=>$cliente]);
     }
 
     function listar(){
@@ -41,5 +45,10 @@ class VendaController extends Controller
 		
 		return 	VendaController::listar();
   
+    }
+
+    function  vendasPorCliente($id){
+        $cli = Cliente::find($id);
+        return view('lista_vendas', ["cliente" => $cli]);
     }
 }

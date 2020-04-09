@@ -30,7 +30,7 @@ Route::get('/tela_login', 'AppController@tela_login')
 Route::post('/login', 'AppController@login')
 	->name('logar');
 
-Route::get('/venda/cadastrar', 'VendaController@telaVendas')
+Route::get('/venda/cadastrar', 'VendaController@telaCadastro')
 	->name('venda_cadastro');
 
 Route::get('/venda/listar', 'VendaController@listar')
@@ -41,4 +41,7 @@ Route::post('/venda/adicionar', 'VendaController@adicionar')
 
 Route::get('/venda/excluir/{id}', 'VendaController@excluir')
 	->name('venda_delete');
+
+Route::get('venda/cliente/{id}', 'VendaController@vendasPorCliente')
+	->name('vendas_cliente');
 
