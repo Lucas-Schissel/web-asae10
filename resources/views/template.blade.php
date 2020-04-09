@@ -32,11 +32,7 @@
 					<li class="nav-item">
 						<a class="nav-link" href="{{route('venda_cadastro')}}">Vender</a>
 					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="{{route('venda_lista')}}">ListarVendas</a>
-					</li>
-
+					
 					</ul>
 					
 				</div>

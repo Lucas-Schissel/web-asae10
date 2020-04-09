@@ -6,7 +6,7 @@
 	<form method="post" action="{{ route('venda_add') }}">
 		@csrf
 		<select name="id_usuario" class="form-control">
-        @foreach ($cliente as $u)
+        @foreach ($usuario as $u)
         <option value="{{ $u->id}}">{{$u->nome}}</option>
         @endforeach
     	</select>
