@@ -14,12 +14,6 @@ class VendaController extends Controller
         return view ("tela_vendas",
             ["usuario"=>$cliente]);
     }
-
-    function listar(){
-        $vnd = Venda::all();
-
-        return view("vendas", [ "us" => $vnd ]);
-	}
 	
     function adicionar(Request $req){
     	$valor = $req->input('valor');
@@ -38,14 +32,6 @@ class VendaController extends Controller
 
         return view("resultado", [ "mensagem" => $msg]);
 	}
-	
-	function excluir($id){
-		$vnd = Venda::find($id);
-		$vnd->delete();
-		
-		return 	VendaController::listar();
-  
-    }
 
     function  vendasPorCliente($id){
         $cli = Cliente::find($id);
